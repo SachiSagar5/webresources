@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ultimate Resource Dashboard</title>
+    <style>
+        :root {
+            --bg: #0f172a;
+            --card-bg: #1e293b;
+            --text-primary: #f8fafc;
+            --text-secondary: #94a3b8;
+            --accent: #38bdf8;
+        }
+
+        body {
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            background-color: var(--bg);
+            color: var(--text-primary);
+            margin: 0;
+            padding: 40px 20px;
+        }
+
+        .container { max-width: 1300px; margin: 0 auto; }
+        
+        h1 { text-align: center; margin-bottom: 50px; font-size: 2.5rem; color: var(--accent); }
+
+        .category-section { margin-bottom: 60px; }
+        
+        .category-title {
+            font-size: 1.8rem;
+            margin-bottom: 25px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--card-bg);
+            display: flex;
+            align-items: center;
+        }
+
+        .category-title::before {
+            content: "▹";
+            margin-right: 10px;
+            color: var(--accent);
+        }
+
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: 15px;
+            overflow: hidden;
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid rgba(255,255,255,0.05);
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            border-color: var(--accent);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3);
+        }
+
+        .screenshot-box {
+            width: 100%;
+            height: 160px;
+            background: #000;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .screenshot-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.8;
+        }
+
+        .card-info { padding: 15px; }
+        
+        .card-name {
+            font-weight: 700;
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+            display: block;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .card-url {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            word-break: break-all;
+        }
+
+        .badge {
+            background: var(--accent);
+            color: #000;
+            font-size: 0.7rem;
+            padding: 2px 8px;
+            border-radius: 10px;
+            font-weight: bold;
+            margin-left: 10px;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Web Resources Hub</h1>
+
+    <section class="category-section">
+        <div class="category-title">Mac Games</div>
+        <div class="card-grid">
+            <a href="https://toxicgame.net/category/pc/games" target="_blank" class="card">
+                <div class="screenshot-box"><img src="https://api.microlink.io/?url=https://toxicgame.net&screenshot=true&embed=screenshot.url" alt="Preview"></div>
+                <div class="card-info"><span class="card-name">Toxic Games Mac</span><span class="card-url">toxicgame.net</span></div>
+            </a>
+        </div>
+    </section>
+
+    <section class="category-section">
+        <div class="category-title">Mega Courses <span class="badge">Cloud Storage</span></div>
+        <div class="card-grid">
+            <a href="https://mega.nz/folder/fws0RLiR#T72PtzIzHF3ZBUMCU3zX0Q" target="_blank" class="card">
+                <div class="screenshot-box"><img src="https://api.microlink.io/?url=https://mega.nz&screenshot=true&embed=screenshot.url" alt="Preview"></div>
+                <div class="card-info"><span class="card-name">Carding Course</span><span class="card-url">mega.nz</span></div>
+            </a>
+            <a href="https://mega.nz/folder/xVBinJoC#IQ0QzdSLL-lb7VVTY7XbSQ" target="_blank" class="card">
+                <div class="screenshot-box"><img src="https://api.microlink.io/?url=https://mega.nz&screenshot=true&embed=screenshot.url" alt="Preview"></div>
+                <div class="card-info"><span class="card-name">CodeMosh All Courses</span><span class="card-url">mega.nz</span></div>
+            </a>
+        </div>
+    </section>
+
+    <section class="category-section">
+        <div class="category-title">Movie Sites</div>
+        <div class="card-grid">
+            <a href="https://watchug.to" target="_blank" class="card"><div class="screenshot-box"><img src="https://api.microlink.io/?url=https://watchug.to&screenshot=true&embed=screenshot.url"></div><div class="card-info"><span class="card-name">Watchug</span><span class="card-url">watchug.to</span></div></a>
+            <a href="https://xprime.tv" target="_blank" class="card"><div class="screenshot-box"><img src="https://api.microlink.io/?url=https://xprime.tv&screenshot=true&embed=screenshot.url"></div><div class="card-info"><span class="card-name">XPrime TV</span><span class="card-url">xprime.tv</span></div></a>
+            <a href="https://netmirror.app" target="_blank" class="card"><div class="screenshot-box"><img src="https://api.microlink.io/?url=https://netmirror.app&screenshot=true&embed=screenshot.url"></div><div class="card-info"><span class="card-name">NetMirror</span><span class="card-url">netmirror.app</span></div></a>
+            <a href="https://24drama.to" target="_blank" class="card"><div class="screenshot-box"><img src="https://api.microlink.io/?url=https://24drama.to&screenshot=true&embed=screenshot.url"></div><div class="card-info"><span class="card-name">24Drama</span><span class="card-url">24drama.to</span></div></a>
+            <a href="https://www.cineby.gd/" target="_blank" class="card"><div class="screenshot-box"><img src="https://api.microlink.io/?url=https://cineby.gd&screenshot=true&embed=screenshot.url"></div><div class="card-info"><span class="card-name">CineBy</span><span class="card-url">cineby.gd</span></div></a>
+            <a href="https://flixer.sh/" target="_blank" class="card"><div class="screenshot-box"><img src="https://api.microlink.io/?url=https://flixer.sh&screenshot=true&embed=screenshot.url"></div><div class="card-info"><span class="card-name">Flixer</span><span class="card-url">flixer.sh</span></div></a>
+            <a href="https://xprime.today/" target="_blank" class="card"><div class="screenshot-box"><img src="https://api.microlink.io/?url=https://xprime.today&screenshot=true&embed=screenshot.url"></div><div class="card-info"><span class="card-name">XPrime Today</span><span class="card-url">xprime.today</span></div></a>
+            <a href="https://docplus.com/home" target="_blank" class="card"><div class="screenshot-box"><img src="https://api.microlink.io/?url=https://docplus.com&screenshot=true&embed=screenshot.url"></div><div class="card-info"><span class="card-name">DocPlus</span><span class="card-url">docplus.com</span></div></a>
+            <a href="https://123mkv.page/" target="_blank" class="card"><div class="screenshot-box"><img src="https://api.microlink.io/?url=https://123mkv.page&screenshot=true&embed=screenshot.url"></div><div class="card-info"><span class="card-name">123MKV</span><span class="card-url">123mkv.page</span></div></a>
+            <a href="https://7starhd.talk/" target="_blank" class="card"><div class="screenshot-box"><img src="https://api.microlink.io/?url=https://7starhd.talk&screenshot=true&embed=screenshot.url"></div><div class="card-info"><span class="card-name">7StarHD</span><span class="card-url">7starhd.talk</span></div></a>
+            <a href="https://nepu.to/" target="_blank" class="card"><div class="screenshot-box"><img src="https://api.microlink.io/?url=https://nepu.to&screenshot=true&embed=screenshot.url"></div><div class="card-info"><span class="card-name">Nepu</span><span class="card-url">nepu.to</span></div></a>
+            <a href="https://veloratv.ru" target="_blank" class="card"><div class="screenshot-box"><img src="https://api.microlink.io/?url=https://veloratv.ru&screenshot=true&embed=screenshot.url"></div><div class="card-info"><span class="card-name">Velora TV</span><span class="card-url">veloratv.ru</span></div></a>
+            <a href="https://cinegram.net/home" target="_blank" class="card"><div class="screenshot-box"><img src="https://api.microlink.io/?url=https://cinegram.net&screenshot=true&embed=screenshot.url"></div><div class="card-info"><span class="card-name">Cinegram</span><span class="card-url">cinegram.net</span></div></a>
+            <a href="https://popcornmovies.org/home" target="_blank" class="card"><div class="screenshot-box"><img src="https://api.microlink.io/?url=https://popcornmovies.org&screenshot=true&embed=screenshot.url"></div><div class="card-info"><span class="card-name">Popcorn Movies</span><span class="card-url">popcornmovies.org</span></div></a>
+            <a href="https://desiremovies.earth/" target="_blank" class="card"><div class="screenshot-box"><img src="https://api.microlink.io/?url=https://desiremovies.earth&screenshot=true&embed=screenshot.url"></div><div class="card-info"><span class="card-name">DesireMovies</span><span class="card-url">desiremovies.earth</span></div></a>
+            <a href="https://new1.hdhub4u.fo/" target="_blank" class="card"><div class="screenshot-box"><img src="https://api.microlink.io/?url=https://new1.hdhub4u.fo&screenshot=true&embed=screenshot.url"></div><div class="card-info"><span class="card-name">HDHub4U</span><span class="card-url">new1.hdhub4u.fo</span></div></a>
+        </div>
+    </section>
+
+    <section class="category-section">
+        <div class="category-title">BootUsb without format</div>
+        <div class="card-grid">
+            <a href="https://www.ventoy.net/en/index.html" target="_blank" class="card">
+                <div class="screenshot-box"><img src="https://api.microlink.io/?url=https://www.ventoy.net&screenshot=true&embed=screenshot.url" alt="Preview"></div>
+                <div class="card-info"><span class="card-name">Ventoy Official</span><span class="card-url">ventoy.net</span></div>
+            </a>
+        </div>
+    </section>
+
+    <section class="category-section">
+        <div class="category-title">Games</div>
+        <div class="card-grid">
+            <a href="https://gametrex.com" target="_blank" class="card"><div class="screenshot-box"><img src="https://api.microlink.io/?url=https://gametrex.com&screenshot=true&embed=screenshot.url"></div><div class="card-info"><span class="card-name">GameTrex</span><span class="card-url">gametrex.com</span></div></a>
+            <a href="https://steamunlocked.org" target="_blank" class="card"><div class="screenshot-box"><img src="https://api.microlink.io/?url=https://steamunlocked.org&screenshot=true&embed=screenshot.url"></div><div class="card-info"><span class="card-name">Steam Unlocked</span><span class="card-url">steamunlocked.org</span></div></a>
+            <a href="https://romsfun.com/roms/playstation-4/page/3/" target="_blank" class="card"><div class="screenshot-box"><img src="https://api.microlink.io/?url=https://romsfun.com&screenshot=true&embed=screenshot.url"></div><div class="card-info"><span class="card-name">Roms Fun (PS4)</span><span class="card-url">romsfun.com</span></div></a>
+            <a href="https://gamebounty.world/saints-row-the-third-remastered" target="_blank" class="card"><div class="screenshot-box"><img src="https://api.microlink.io/?url=https://gamebounty.world&screenshot=true&embed=screenshot.url"></div><div class="card-info"><span class="card-name">Game Bounty</span><span class="card-url">gamebounty.world</span></div></a>
+        </div>
+    </section>
+
+    <section class="category-section">
+        <div class="category-title">Other Services</div>
+        <div class="card-grid">
+            <a href="https://www.oxaam.com/freeservice.php" target="_blank" class="card"><div class="screenshot-box"><img src="https://api.microlink.io/?url=https://www.oxaam.com&screenshot=true&embed=screenshot.url"></div><div class="card-info"><span class="card-name">Oxaam Free Service</span><span class="card-url">oxaam.com</span></div></a>
+            <a href="https://www.keepscreenon.com" target="_blank" class="card"><div class="screenshot-box"><img src="https://api.microlink.io/?url=https://www.keepscreenon.com&screenshot=true&embed=screenshot.url"></div><div class="card-info"><span class="card-name">Keep Screen On</span><span class="card-url">keepscreenon.com</span></div></a>
+            <a href="https://imageeditor.online" target="_blank" class="card"><div class="screenshot-box"><img src="https://api.microlink.io/?url=https://imageeditor.online&screenshot=true&embed=screenshot.url"></div><div class="card-info"><span class="card-name">Image Editor</span><span class="card-url">imageeditor.online</span></div></a>
+            <a href="https://deepwebnest.com" target="_blank" class="card"><div class="screenshot-box"><img src="https://api.microlink.io/?url=https://deepwebnest.com&screenshot=true&embed=screenshot.url"></div><div class="card-info"><span class="card-name">Deep Web Nest</span><span class="card-url">deepwebnest.com</span></div></a>
+            <a href="https://aigenmax.art" target="_blank" class="card"><div class="screenshot-box"><img src="https://api.microlink.io/?url=https://aigenmax.art&screenshot=true&embed=screenshot.url"></div><div class="card-info"><span class="card-name">AiGen Max</span><span class="card-url">aigenmax.art</span></div></a>
+            <a href="https://business.gemini.google/" target="_blank" class="card"><div class="screenshot-box"><img src="https://api.microlink.io/?url=https://business.gemini.google&screenshot=true&embed=screenshot.url"></div><div class="card-info"><span class="card-name">Gemini Business</span><span class="card-url">gemini.google</span></div></a>
+            <a href="https://vanced.to/revanced-google-photos" target="_blank" class="card"><div class="screenshot-box"><img src="https://api.microlink.io/?url=https://vanced.to&screenshot=true&embed=screenshot.url"></div><div class="card-info"><span class="card-name">ReVanced Photos</span><span class="card-url">vanced.to</span></div></a>
+        </div>
+    </section>
+</div>
+
+</body>
+</html>
